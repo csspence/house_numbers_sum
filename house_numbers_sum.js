@@ -17,3 +17,20 @@ Constraints: 5 ≤ inputArray.length ≤ 50, 0 ≤ inputArray[i] ≤ 10.
 
 [output] an integer
 */
+
+const houseNumbersSum = (inputArray) => {
+    let total = 0;
+
+    for(let i = 0; i < inputArray.length; i++) {
+      if(inputArray[i] === 0) {
+          break;
+      }
+      total += inputArray[i];
+    }
+
+    return total;
+  }
+
+
+  houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]); // 11
+  houseNumbersSum([4, 2, 5, 6, 7, 8, 0, 3, 0, 4, 5]) // 32
